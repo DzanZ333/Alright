@@ -9,6 +9,7 @@ G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RE/RequestFishingMinigameClick"]:FireServer()
 wait()
+end
 end)
 
 KillingCheats:CreateToggle("Auto Charge", function(gay)
@@ -16,6 +17,7 @@ G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/ChargeFishingRod"]:InvokeServer()
 wait(1)
+end
 end)
 
 KillingCheats:CreateToggle("Auto Fish", function(gay)
@@ -23,6 +25,7 @@ G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/RequestFishingMinigameStarted"]:InvokeServer(-1.2379989624023438)
 wait(0.2)
+end
 end)
 
 local KillingCheats = PhantomForcesWindow:NewSection("MISC")
