@@ -1,23 +1,36 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("Combat")
+local PhantomForcesWindow = Library:NewWindow("FISH IT")
 
-local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
+local KillingCheats = PhantomForcesWindow:NewSection("MAIN")
 
 KillingCheats:CreateToggle("Auto Click", function(gay)
 G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RE/RequestFishingMinigameClick"]:FireServer()
+wait()
 end)
 
 KillingCheats:CreateToggle("Auto Charge", function(gay)
 G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/ChargeFishingRod"]:InvokeServer()
+wait(1)
 end)
 
 KillingCheats:CreateToggle("Auto Fish", function(gay)
 G_loop = gay
 while G_loop do
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/RequestFishingMinigameStarted"]:InvokeServer(-1.2379989624023438)
+wait(0.2)
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("MISC")
+
+KillingCheats:CreateButton("Spawn Dev Boat", function()
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/SpawnBoat"]:InvokeServer(9)
+end)
+
+KillingCheats:CreateButton("Despawn Boat", function()
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/DespawnBoat"]:InvokeServer()
 end)
