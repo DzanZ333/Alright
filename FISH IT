@@ -1,0 +1,23 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Combat")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
+
+KillingCheats:CreateToggle("Auto Click", function(gay)
+G_loop = gay
+while G_loop do
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RE/RequestFishingMinigameClick"]:FireServer()
+end)
+
+KillingCheats:CreateToggle("Auto Charge", function(gay)
+G_loop = gay
+while G_loop do
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/ChargeFishingRod"]:InvokeServer()
+end)
+
+KillingCheats:CreateToggle("Auto Fish", function(gay)
+G_loop = gay
+while G_loop do
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_net@0.2.0"].net["RF/RequestFishingMinigameStarted"]:InvokeServer(-1.2379989624023438)
+end)
